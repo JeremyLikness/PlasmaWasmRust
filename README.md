@@ -26,31 +26,31 @@ publishing the resulting package to NPM.
 * [`wee_alloc`](https://github.com/rustwasm/wee_alloc), an allocator optimized
   for small code size.
 
-## 🚴 Usage
+### 🚴 Usage
 
-### 🐑 Use `cargo generate` to Clone this Template
+#### 🐑 Use `cargo generate` to Clone this Template
 
 [Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
 
-```
+```bash
 cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
 cd my-project
 ```
 
-### 🛠️ Build with `wasm-pack build`
+#### 🛠️ Build with `wasm-pack build`
 
-```
+```bash
 wasm-pack build
 ```
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+#### 🔬 Test in Headless Browsers with `wasm-pack test`
 
-```
+```bash
 wasm-pack test --headless --firefox
 ```
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+#### 🎁 Publish to NPM with `wasm-pack publish`
 
-```
+```bash
 wasm-pack publish
 ```
