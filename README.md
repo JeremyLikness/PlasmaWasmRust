@@ -2,6 +2,8 @@
 
 This is a port of my `Go` implementation of plasma to Rust. It uses `wasm-pack-template` described below.
 
+For a full walkthrough, read: [Plasma gets Rust-y: Another WebAssembly Experiment](https://blog.jeremylikness.com/plasma-gets-rust-y-another-webassembly-experiment-bde6abf3061c).
+
 ## 🦀🕸️ `wasm-pack-template`
 
 A template for kick starting a Rust and WebAssembly project using
