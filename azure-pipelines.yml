@@ -10,12 +10,15 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
+
+variables:
+  PATH: $PATH:$HOME/.cargo/bin
+
 steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-
 
 - task: CmdLine@2
   inputs:
@@ -24,10 +27,10 @@ steps:
       sh rustup.sh -y
   displayName: 'Install Rust'
 
-- script: '$HOME/.cargo/bin/cargo install wasm-pack'
+- script: 'cargo install wasm-pack'
   displayName: 'Install wasm-pack'
 
-- script: '$HOME/.cargo/bin/wasm-pack build'
+- script: 'wasm-pack build'
   displayName: 'Build WebAssembly'
 
 - script: 'npm link'
