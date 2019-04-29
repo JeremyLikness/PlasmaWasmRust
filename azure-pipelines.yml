@@ -45,6 +45,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)/dist'
+    PathtoPublish: '$(Build.Repository.LocalPath)/www/dist'
     ArtifactName: 'plasmawasmrust'
   displayName: 'Publish artifacts'
