@@ -40,8 +40,11 @@ steps:
     npm install
     npm link plasma-wasm-rust
     npm run build
-  displayName: 'npm install and build'
+  displayName: 'npm install and build' 
   workingDirectory: $(Build.Repository.LocalPath)/www
 
-- script: 'ls -al www'
-  displayName: 'Show assets'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.Repository.LocalPath)/dist'
+    ArtifactName: 'plasmawasmrust'
+  displayName: 'Publish artifacts'
