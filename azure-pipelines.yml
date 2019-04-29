@@ -1,4 +1,5 @@
 # Node.js
+
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -15,7 +16,27 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: CmdLine@2
+  inputs:
+    script: 'curl https://sh.rustup.rs -sSf | sh'
+  displayName: 'Install Rust'
+
+- script: 'cargo install wasm-pack'
+  displayName: 'Install wasm-pack'
+
+- script: 'wasm-pack build'
+  displayName: 'Build WebAssembly'
+
+- script: 'npm link'
+  displayName: 'npm link'
+  workingDirectory: '$(Build.Repository.LocalPath)/pkg'
+
 - script: |
     npm install
+    npm link wasm-plasma-rust
     npm run build
   displayName: 'npm install and build'
+  workingDirectory: $(Build.Repository.LocalPath)/www
+
+- script: 'ls -al www'
+  displayName: 'Show assets'
