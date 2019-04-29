@@ -16,9 +16,12 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+
 - task: CmdLine@2
   inputs:
-    script: 'curl https://sh.rustup.rs -sSf | sh'
+    script: | 
+      curl -f -L https://static.rust-lang.org/rustup.sh -O
+      sh rustup.sh -y
   displayName: 'Install Rust'
 
 - script: 'cargo install wasm-pack'
