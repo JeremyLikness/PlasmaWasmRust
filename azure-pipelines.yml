@@ -24,10 +24,10 @@ steps:
       sh rustup.sh -y
   displayName: 'Install Rust'
 
-- script: 'cargo install wasm-pack'
+- script: '$HOME/.cargo/bin/cargo install wasm-pack'
   displayName: 'Install wasm-pack'
 
-- script: 'wasm-pack build'
+- script: '$HOME/.cargo/bin/wasm-pack build'
   displayName: 'Build WebAssembly'
 
 - script: 'npm link'
