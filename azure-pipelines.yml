@@ -38,7 +38,7 @@ steps:
 
 - script: |
     npm install
-    npm link wasm-plasma-rust
+    npm link plasma-wasm-rust
     npm run build
   displayName: 'npm install and build'
   workingDirectory: $(Build.Repository.LocalPath)/www
