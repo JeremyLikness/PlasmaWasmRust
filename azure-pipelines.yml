@@ -10,10 +10,6 @@ trigger:
 pool:
   vmImage: 'Ubuntu-16.04'
 
-
-variables:
-  PATH: $PATH:$HOME/.cargo/bin
-
 steps:
 - task: NodeTool@0
   inputs:
@@ -26,6 +22,9 @@ steps:
       curl -f -L https://static.rust-lang.org/rustup.sh -O
       sh rustup.sh -y
   displayName: 'Install Rust'
+
+- script: 'echo "##vso[task.setvariable variable=PATH]$PATH:$HOME/.cargo/bin"'
+  displayName: 'Update path'
 
 - script: 'cargo install wasm-pack'
   displayName: 'Install wasm-pack'
