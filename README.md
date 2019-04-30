@@ -4,6 +4,8 @@
 
 ![Deployment Status](https://jeremylikness.vsrm.visualstudio.com/_apis/public/Release/badge/0761d6ee-ac22-48b2-8a85-d357b62f4a39/1/1)
 
-This is a port of my `Go` implementation of plasma to Rust. It uses `wasm-pack-template` described below.
+This is a port of my `Go` implementation of plasma to Rust. It uses `wasm-pack-template`. Inspect the Azure pipelines definition for build details.
+
+👀 [Live Demo](https://jlikme.z13.web.core.windows.net/wasm/PlasmaWasmRust)
 
 For a full walkthrough, read: [Plasma gets Rust-y: Another WebAssembly Experiment](https://blog.jeremylikness.com/plasma-gets-rust-y-another-webassembly-experiment-bde6abf3061c).
