@@ -9,3 +9,5 @@ This is a port of my `Go` implementation of plasma to Rust. It uses `wasm-pack-t
 👀 [Live Demo](https://jlikme.z13.web.core.windows.net/wasm/PlasmaWasmRust)
 
 For a full walkthrough, read: [Plasma gets Rust-y: Another WebAssembly Experiment](https://blog.jeremylikness.com/plasma-gets-rust-y-another-webassembly-experiment-bde6abf3061c).
+
+> This repository is continuously built and deployed using free Azure Pipelines. If you're interested in how it was setup and configured to build automatically and deploy to low cost Azure Storage Static Websites, read [Deploy WebAssembly from GitHub to Azure Storage Static Websites with Azure Pipelines](https://jlik.me/fzk).
